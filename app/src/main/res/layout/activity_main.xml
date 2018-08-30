@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="344dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:orientation="vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="86dp">
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="229dp"
+                android:layout_height="20dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginTop="8dp"
+                android:text="Battery check"
+                android:textAlignment="viewStart"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toStartOf="@+id/batteryCheck"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="229dp"
+                android:layout_height="15dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginTop="5dp"
+                android:text="Send request if low or high"
+                android:textSize="10sp"
+                app:layout_constraintEnd_toStartOf="@+id/batteryCheck"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+            <CheckBox
+                android:id="@+id/batteryCheck"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="29dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginTop="8dp"
+                android:textAlignment="viewStart"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="1.0" />
+        </android.support.constraint.ConstraintLayout>
+
+        <EditText
+            android:id="@+id/etUrl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="url api rest" />
+
+        <EditText
+            android:id="@+id/et_device_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="deviceName" />
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="onMajClicked"
+            android:text="Mise à jour" />
+
+        <Button
+            android:id="@+id/bt_battery_low"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Test battery Low"
+            android:onClick="onBatteryLowClicked"
+            tools:layout_editor_absoluteX="87dp"
+            tools:layout_editor_absoluteY="225dp" />
+
+        <Button
+            android:id="@+id/bt_battery_high"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Test battery high"
+            android:onClick="onBatteryHighClicked"
+            tools:layout_editor_absoluteX="136dp"
+            tools:layout_editor_absoluteY="242dp" />
+    </LinearLayout>
+
+
+</android.support.constraint.ConstraintLayout>
